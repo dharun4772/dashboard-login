@@ -1,0 +1,56 @@
+<html>
+<head>
+  <title>Firebase Login</title>
+  <link href="https://fonts.googleapis.com/css?family=Nunito:400,600,700" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+
+<body class="login-img3-body">
+
+
+  <div id="login_div" class="main-div">
+    <div class="login-wrap">
+      <p class="login-img"><i class="icon_lock_alt"></i></p>
+    <input type="email" placeholder="Email..." id="email_field" />
+    <input type="password" placeholder="Password..." id="password_field" />
+
+    <button onclick="login()" style="background-color: royalblue;">Login to Account</button>
+    </div>
+  </div>
+
+  <div id="user_div" class="loggedin-div">
+        <div>
+        <p id="user_para" style="background-color: black">Welcome to Firebase web login Example. You're currently logged in.</p>
+        <a href="dashboard.html"><button class="btn-btn-primary" style="background-color: royalblue;">Click here to navigate to dashboard</button></a>
+        </div>
+        <div style="padding-top:20px">
+        <button class="btn btn-danger" style="background-color: red;" onclick="logout()" >Logout</button>
+        </div>
+  </div>
+
+
+
+  <script src="https://www.gstatic.com/firebasejs/4.8.1/firebase.js"></script>
+  <script>
+    // Your web app's Firebase configuration
+    var firebaseConfig = {
+      apiKey: "AIzaSyBmjI7g6SenA_AWCvjij4u2ZJVqJCW_kIE",
+      authDomain: "face-dashboard.firebaseapp.com",
+      databaseURL: "https://face-dashboard.firebaseio.com",
+      projectId: "face-dashboard",
+      storageBucket: "face-dashboard.appspot.com",
+      messagingSenderId: "378833298796",
+      appId: "1:378833298796:web:8f7321d3585ffd85aa7f49",
+      measurementId: "G-1QZCDR285W"
+    };
+    // Initialize Firebase
+    firebase.initializeApp(firebaseConfig);
+    firebase.analytics();
+
+    const auth=firebase.auth();
+  </script>
+  <script src="index.js"></script>
+
+</body>
+</html>
